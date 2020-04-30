@@ -1,20 +1,14 @@
-package com.example.nikhil.testapp;
+package com.app.pk.HelFit;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.CardView;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
-public class Home extends Fragment {
+public class Profile extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -26,7 +20,7 @@ public class Home extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public Home() {
+    public Profile() {
         // Required empty public constructor
     }
 
@@ -43,30 +37,7 @@ public class Home extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View rootView = inflater.inflate(R.layout.fragment_home, container, false);
-
-        /* Link walks cardview to 'step' tracker frag */
-        CardView walkCardView = rootView.findViewById(R.id.walkCardview);
-        walkCardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ViewPager viewpager = getActivity().findViewById(R.id.pager);
-                viewpager.setCurrentItem(2);
-            }
-        });
-
-        /* Link profile cardview to 'profile' frag */
-        CardView profileCardview = rootView.findViewById(R.id.profileCardview);
-        profileCardview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ViewPager viewpager = getActivity().findViewById(R.id.pager);
-                viewpager.setCurrentItem(0);
-            }
-        });
-
-        return rootView;
-
+        return inflater.inflate(R.layout.fragment_profile, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

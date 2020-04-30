@@ -1,14 +1,16 @@
-package com.example.nikhil.testapp;
+package com.app.pk.HelFit;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
+import androidx.cardview.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class Profile extends Fragment {
+public class Home extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -20,7 +22,7 @@ public class Profile extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public Profile() {
+    public Home() {
         // Required empty public constructor
     }
 
@@ -37,7 +39,30 @@ public class Profile extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        final View rootView = inflater.inflate(R.layout.fragment_home, container, false);
+
+        /* Link walks cardview to 'step' tracker frag */
+        CardView walkCardView = rootView.findViewById(R.id.walkCardview);
+        walkCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ViewPager viewpager = getActivity().findViewById(R.id.pager);
+                viewpager.setCurrentItem(2);
+            }
+        });
+
+        /* Link profile cardview to 'profile' frag */
+        CardView profileCardview = rootView.findViewById(R.id.profileCardview);
+        profileCardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ViewPager viewpager = getActivity().findViewById(R.id.pager);
+                viewpager.setCurrentItem(0);
+            }
+        });
+
+        return rootView;
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event

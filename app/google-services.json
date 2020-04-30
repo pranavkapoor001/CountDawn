@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "22746665150",
+    "firebase_url": "https://helfit-414ba.firebaseio.com",
+    "project_id": "helfit-414ba",
+    "storage_bucket": "helfit-414ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22746665150:android:236eb2c9570be582a08eef",
+        "android_client_info": {
+          "package_name": "com.app.pk.HelFit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "22746665150-09g3b77u97luagq2ph9lb9jcbhfk851a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIj2D6q_bdN3_YHRB6Fj5sIjKtn_o5IqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "22746665150-09g3b77u97luagq2ph9lb9jcbhfk851a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22746665150:android:82258647d2f8e3baa08eef",
+        "android_client_info": {
+          "package_name": "com.app.pk.testapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "22746665150-om2ecps6jcp2i9frgss1b9kndaj87pa0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.pk.testapp",
+            "certificate_hash": "70b007611801222ad48bbff8165e2cdbc2213ca4"
+          }
+        },
+        {
+          "client_id": "22746665150-09g3b77u97luagq2ph9lb9jcbhfk851a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIj2D6q_bdN3_YHRB6Fj5sIjKtn_o5IqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "22746665150-09g3b77u97luagq2ph9lb9jcbhfk851a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

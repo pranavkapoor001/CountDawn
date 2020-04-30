@@ -1,4 +1,4 @@
-package com.example.nikhil.testapp;
+package com.app.pk.HelFit;
 public class StepDetector {
 
     private static final int ACCEL_RING_SIZE = 50;
