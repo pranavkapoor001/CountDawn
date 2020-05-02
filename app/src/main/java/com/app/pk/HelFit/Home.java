@@ -9,6 +9,9 @@ import androidx.cardview.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
 
 public class Home extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
@@ -19,6 +22,7 @@ public class Home extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private int watertrack_num;
 
     private OnFragmentInteractionListener mListener;
 
@@ -40,6 +44,27 @@ public class Home extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View rootView = inflater.inflate(R.layout.fragment_home, container, false);
+
+        final Button waterinc = rootView.findViewById(R.id.waterinc);
+        final Button waterdec = rootView.findViewById(R.id.waterdec);
+        final TextView watertrack =  rootView.findViewById(R.id.watertrack);
+
+        waterinc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                watertrack_num ++;
+                watertrack.setText(String.valueOf(watertrack_num));
+            }
+        });
+        waterdec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(watertrack_num>0) {
+                    watertrack_num--;
+                    watertrack.setText(String.valueOf(watertrack_num));
+                }
+            }
+        });
 
         /* Link walks cardview to 'step' tracker frag */
         CardView walkCardView = rootView.findViewById(R.id.walkCardview);
